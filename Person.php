@@ -1,26 +1,30 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Saleem
- * Date: 19/10/2018
- * Time: 22:06
- */
+
 
 class Person
 
 {
-    public $name;
-    public $age;
+    private $name;
+    private $age;
 
     public function __construct($name)
     {
         $this->name = $name;
     }
 
-    public function setAge($age)
-    {
 
-        $this->age = $age;
+
+    public function setAge($age) {
+        try {
+            if ($age < 18) {
+                throw new Exception("Not old enough.");
+            }
+            $this->age = $age;
+        }
+        catch (Exception $e) {
+
+            echo $e->getMessage();
+        }
     }
 
     public function getAge()
@@ -33,6 +37,10 @@ class Person
 
 $john = new Person('John Doe');
 $john->setAge(30);
+
+$john->age = 8; // age cannot be set manually, the user has to use the setAge method to set age.
+                // setAge method defines the behaviour for the age method.
+                // This is Encapsulation.
 
 
 
