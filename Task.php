@@ -1,10 +1,4 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Saleem
- * Date: 18/10/2018
- * Time: 20:58
- */
 
 class Task
 {
