@@ -1,10 +1,5 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: Saleem
- * Date: 19/10/2018
- * Time: 22:06
- */
+
 
 class Person
 
